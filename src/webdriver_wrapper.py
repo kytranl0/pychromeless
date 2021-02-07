@@ -71,6 +71,9 @@ class WebDriverWrapper:
     def get_inner_html(self, xpath):
         elem_value = self._driver.find_element_by_xpath(xpath)
         return elem_value.get_attribute('innerHTML')
+
+    def find_elements_by_class_name(self, class_name):
+        return self._driver.find_elements_by_class_name(class_name)
     
     def find(self, xpath):
         return self._driver.find_element_by_xpath(xpath)
